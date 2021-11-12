@@ -75,7 +75,6 @@ const PositionTabs = ({ position, enableLineup }) => {
     return (
         <div>
             <div className="row">
-                <div className='col-4'>
                 <div className="dropdown" id="PosDrop">
                     <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" id="PosBtn">QB</button>
                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -88,12 +87,9 @@ const PositionTabs = ({ position, enableLineup }) => {
                     </ul>
                     <button type="button" className="btn btn-light"><i className="arrow left" onClick={() => arrowClick("prev")}></i></button>
                     <button type="button" className="btn btn-light"><i className="arrow right" onClick={() => arrowClick("next")}></i></button>
+                    <button type="button" className="btn btn-link px-3 mr-5"  onClick={() => refreshTable('SEL')}>My Selected Players</button>
                 </div>
                 </div>
-                <div className="col-8">
-                <button type="button" className="btn btn-link px-3" style={{marginLeft: "-100px"}} onClick={() => refreshTable('SEL')}>My Selected Players</button>
-                </div>
-            </div>
         </div>
     )
 }
