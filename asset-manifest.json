@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ghp-repo/static/css/main.f6075303.chunk.css",
-    "main.js": "/ghp-repo/static/js/main.faf1f10f.chunk.js",
-    "main.js.map": "/ghp-repo/static/js/main.faf1f10f.chunk.js.map",
+    "main.css": "/ghp-repo/static/css/main.20bf10d5.chunk.css",
+    "main.js": "/ghp-repo/static/js/main.d0c64fca.chunk.js",
+    "main.js.map": "/ghp-repo/static/js/main.d0c64fca.chunk.js.map",
     "runtime-main.js": "/ghp-repo/static/js/runtime-main.e391f7c2.js",
     "runtime-main.js.map": "/ghp-repo/static/js/runtime-main.e391f7c2.js.map",
     "static/js/2.9b96aac9.chunk.js": "/ghp-repo/static/js/2.9b96aac9.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.13f099d6.chunk.js": "/ghp-repo/static/js/3.13f099d6.chunk.js",
     "static/js/3.13f099d6.chunk.js.map": "/ghp-repo/static/js/3.13f099d6.chunk.js.map",
     "index.html": "/ghp-repo/index.html",
-    "static/css/main.f6075303.chunk.css.map": "/ghp-repo/static/css/main.f6075303.chunk.css.map",
+    "static/css/main.20bf10d5.chunk.css.map": "/ghp-repo/static/css/main.20bf10d5.chunk.css.map",
     "static/js/2.9b96aac9.chunk.js.LICENSE.txt": "/ghp-repo/static/js/2.9b96aac9.chunk.js.LICENSE.txt",
     "static/media/index.css": "/ghp-repo/static/media/field1.e1d166bc.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.e391f7c2.js",
     "static/js/2.9b96aac9.chunk.js",
-    "static/css/main.f6075303.chunk.css",
-    "static/js/main.faf1f10f.chunk.js"
+    "static/css/main.20bf10d5.chunk.css",
+    "static/js/main.d0c64fca.chunk.js"
   ]
 }
