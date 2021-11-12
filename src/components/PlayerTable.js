@@ -6,6 +6,16 @@ const PlayerTable = (props) => {
         props.validateSelectionLength();
     })
 
+    var player1 = {
+        uid: 1,
+        position: 'QB',
+        player_name: 'AAAAA BBBBB',
+        team: 'PHI',
+        opponent: 'DEN',
+        salary: '2000',
+        projected_pts: '25'
+    };
+
     // Takes in row number and player UID
     // If player is selected removes selected class
     // If player is not selected, adds the selected class
@@ -44,22 +54,22 @@ const PlayerTable = (props) => {
         // populates table with players
         if(selectedRow) {
             return (
-                <tr key={index} className='selected' onClick={() => handleRowClick({index}, player.uid, player.position)}>
-                    <td>{player.player_name}</td>
-                    <td>{player.team}</td>
-                    <td>{player.opponent}</td>
-                    <td>{player.salary}</td>
-                    <td>{player.projected_pts}</td>
+                <tr key={index} className='selected' onClick={() => handleRowClick({index}, player1.uid, player1.position)}>
+                    <td>{player1.player_name}</td>
+                    <td>{player1.team}</td>
+                    <td>{player1.opponent}</td>
+                    <td>{player1.salary}</td>
+                    <td>{player1.projected_pts}</td>
                 </tr>)
         }
         else {
             return (
-                <tr key={index} onClick={() => handleRowClick({index}, player.uid, player.position)}>
-                    <td>{player.player_name}</td>
-                    <td>{player.team}</td>
-                    <td>{player.opponent}</td>
-                    <td>{player.salary}</td>
-                    <td>{player.projected_pts}</td>
+                <tr key={index} onClick={() => handleRowClick({index}, player1.uid, player1.position)}>
+                    <td>{player1.player_name}</td>
+                    <td>{player1.team}</td>
+                    <td>{player1.opponent}</td>
+                    <td>{player1.salary}</td>
+                    <td>{player1.projected_pts}</td>
                 </tr>
             )
         }
@@ -79,7 +89,13 @@ const PlayerTable = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {props.playerArray.map(getRowData)}
+                <tr key='1'>
+                    <td>{player1.player_name}</td>
+                    <td>{player1.team}</td>
+                    <td>{player1.opponent}</td>
+                    <td>{player1.salary}</td>
+                    <td>{player1.projected_pts}</td>
+                </tr>
                 </tbody>
             </table>
         </div>
