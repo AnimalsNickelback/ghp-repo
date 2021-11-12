@@ -26,13 +26,22 @@ const PositionTabs = ({ position, enableLineup }) => {
     // called when arrow button is clicked
     const arrowClick = (direction) => {
 
-        console.log("Click");
+        // If selections showing, set position back to QB on arrow click
+        let posBtn = document.getElementById("PosBtn");
+        if(posBtn.textContent == "SEL") {
+            refreshTable("QB");
+            return;
+        }
+
+        // If lineup is showing, arrow click disabled
+        if(posBtn.textContent == "Lineup") {
+            return;
+        }
 
         // create array of positions
         let positionList = ["QB", "RB", "WR", "TE", "FLEX", "DEF"];
 
         // get current pos
-        let posBtn = document.getElementById("PosBtn");
         let text = posBtn.textContent;
         let index = positionList.indexOf(text);
 
@@ -76,12 +85,11 @@ const PositionTabs = ({ position, enableLineup }) => {
                         <li><a className="dropdown-item" onClick={() => refreshTable('FLEX')} id="FLEXtab">FLEX</a></li>
                         <li><a className="dropdown-item" onClick={() => refreshTable('DEF')} id="DEFtab">DEF</a></li>
                     </ul>
-                    <button type="button" className="btn btn-link px-3">Selections</button>
-                    <button type="button" className="btn btn-link px-3">My Lineup</button>
-                </div>
-                <div className="col">
                     <button type="button" className="btn btn-light"><i className="arrow left" onClick={() => arrowClick("prev")}></i></button>
                     <button type="button" className="btn btn-light"><i className="arrow right" onClick={() => arrowClick("next")}></i></button>
+                </div>
+                <div className="col">
+                <button type="button" className="btn btn-link px-3" onClick={() => refreshTable('SEL')}>My Selected Players</button>
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({resetBtnClick}) => {
 
     const testfunc = ()  => {
         console.log("Clicked Help");
@@ -13,8 +13,11 @@ const Header = () => {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div className="navbar-nav">
+            <div className="navbar-nav">
                     <a className="nav-item nav-link active px-4" style={{color: 'darkred'}} onClick={() => {testfunc()}} href="#">Help <span className="sr-only">(current)</span></a>
+                </div>
+            <div className="navbar-nav">
+                    <a className="nav-item nav-link active px-4" onClick={() => {resetBtnClick()}} href="#">Start Over<span className="sr-only">(current)</span></a>
                 </div>
             </div>
         </nav>

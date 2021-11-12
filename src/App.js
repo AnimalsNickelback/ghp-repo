@@ -36,11 +36,17 @@ function App() {
 
   // Used by reset button
   const initializePageFromReset = () => {
+    // get players
     getPlayers('QB');
-    let  selElement = document.getElementById('SELtab');
-    selElement.classList.remove('active');
-    let qbElement = document.getElementById('QBtab');
-    qbElement.classList.add('active');
+
+    // change dropdown text
+    let posBtn = document.getElementById("PosBtn");
+    posBtn.textContent = "QB";
+
+    // Set lineup view to false
+    setEnableLineup(false);
+
+
   }
 
   const getPlayers = (position) => {
@@ -90,10 +96,13 @@ function App() {
   // add is boolean value
   // True if add, false if delete
   const onSelectPlayer = (playerObj, add) => {
-    if(add){
-      //if(!selectedPlayerState.includes(playerObj)){ 
-        setSelectedPlayers(arr => [...arr, playerObj]);
-      //}
+    if(add) {
+      // Dont add player to selected array if viewing selections
+      let posBtn = document.getElementById("PosBtn");
+      if(posBtn.textContent == "SEL") {
+        return;
+      }
+      setSelectedPlayers(arr => [...arr, playerObj]);
     }
     else {
       setSelectedPlayers(arr => (arr.filter((uid) => uid.uid !== playerObj.uid)));
@@ -196,6 +205,11 @@ function App() {
     // Set text
     determineAppText("SUBMIT");
 
+    // Set Dropdown text
+    let posBtn = document.getElementById("PosBtn");
+    posBtn.textContent = "Lineup";
+    setEnableLineup(true);
+
     // Create http call to backend
     const url = 'http://localhost:8000/submitlineup';
     const httpReq = new XMLHttpRequest();
@@ -205,7 +219,6 @@ function App() {
     httpReq.onreadystatechange = function() {//Call a function when the state changes.
       if(httpReq.readyState == 4 && httpReq.status == 201) {
         // Post was successful, put code here for selecting lineup tab
-        setEnableLineup(true);
         let returnedLineup = JSON.parse(httpReq.responseText);
         setPlayers(returnedLineup);
       }
@@ -224,7 +237,7 @@ function App() {
   // Removes all selections
   const clearSelections = () => {
     // if selections is open, reset screen to qb tab
-    if(viewSelections) {
+    if(viewSelections || enableLineup) {
       initializePageFromReset(true);
     }
     setSelectedPlayers([]);
@@ -232,28 +245,24 @@ function App() {
 
   // playerArray is an array of players to be passed in
   return (
-    <div>
-      <div className="container-fluid bgImage">
-        <Header />
+    <div className='bgImage'>
+      <div className="container-fluid">
+        <Header resetBtnClick={clearSelections} />
         <div className='container'>
-          <TextBox text={appText}/>
+          <TextBox text={appText} submitBtnClick={onSubmit}/>
           <PositionTabs position={getPlayers} enableLineup={enableLineup} />
           <div className='row'>
             <div className='col table-player'>
               <PlayerTable playerArray={players} onSelectPlayer={onSelectPlayer} selectedPlayers={selectedPlayerState} viewSelections={viewSelections} validateSelectionLength={enoughPlayersSelected}/>
             </div>
         </div>
-        <div className='row'>
-        <div className='col'>
-        <div className="text-center pt-4">
-          <button className='btn btn-secondary p-3 px-5' onClick={clearSelections}>Reset</button></div>
-        </div>
-        <div className='col'>
-          <div className="text-center pt-4">
-            <button className="btn btn-primary p-3 px-5" onClick={onSubmit} aria-disabled="true" id="SubmitBtn">Submit</button></div>
-        </div>
       </div>
+      <div className='row'>
+         <div className='col' style={{height: '100px'}}></div>
       </div>
+      <footer>
+        <p className='footer'>Some Disclaimer about how results are not guaranteed</p>
+      </footer>
       </div>
     </div>
   );
