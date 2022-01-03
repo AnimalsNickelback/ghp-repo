@@ -1,0 +1,65 @@
+.my-row {
+  border: 3px solid red;
+}
+
+.my-col {
+  border: 3px dotted blue;
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+}
+
+.navbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+.navbar-container nav {
+  display: none;
+}
+
+.mobile-menu {
+  cursor: pointer;
+}
+
+.sel-players-container {
+  margin-bottom: 2em;
+}
+
+.sel-players-container .sel-players {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tools-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tools-col .dropdown {
+  margin-right: 1.5em;
+}
+
+.tools-col .selected {
+  margin-bottom: -1.5em;
+}
+
+.submit-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+/*# sourceMappingURL=main.css.map */

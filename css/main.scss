@@ -1,0 +1,58 @@
+.my-row {
+    border: 3px solid red;
+}
+
+.my-col {
+    border: 3px dotted blue;
+}
+
+
+
+.logo {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+.navbar-container {
+    display: flex;
+    place-content: space-between;
+
+    nav {
+        display: none;
+    }
+
+}
+
+.mobile-menu {
+    cursor: pointer;
+}
+
+.sel-players-container {
+
+    margin-bottom: 2em;
+
+    .sel-players {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.tools-col {
+    display: flex;
+
+    .dropdown {
+        margin-right: 1.5em;
+    }
+
+    .selected {
+        margin-bottom: -1.5em;
+    }
+}
+
+.submit-col {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
