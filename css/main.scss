@@ -30,6 +30,7 @@
 
 .sel-players-container {
 
+    margin-top: 1em;
     margin-bottom: 2em;
 
     .sel-players {
@@ -46,13 +47,34 @@
     }
 
     .selected {
-        margin-bottom: -1.5em;
+        padding-top: 0.5em;
+        text-decoration: none;
     }
 }
 
 .submit-col {
     display: flex;
     justify-content: flex-end;
+}
+
+.player-table {
+    margin-top: 1em;
+
+    .table-header {
+        background: #f8f9fa ;
+    }
+}
+
+.matchup {
+    font-size: small;
+}
+
+.my-card {
+    border: none;
+    &:hover {
+        // use js to fix this
+        background: rgba(0, 0, 0, 0.001);
+    }
 }
 
 

@@ -10,6 +10,8 @@
   text-decoration: none;
   color: black;
   font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 1.5em;
 }
 
 .navbar-container {
@@ -28,6 +30,7 @@
 }
 
 .sel-players-container {
+  margin-top: 1em;
   margin-bottom: 2em;
 }
 
@@ -51,7 +54,8 @@
 }
 
 .tools-col .selected {
-  margin-bottom: -1.5em;
+  padding-top: 0.5em;
+  text-decoration: none;
 }
 
 .submit-col {
@@ -61,5 +65,33 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.player-table {
+  margin-top: 1em;
+}
+
+.player-table .table-header {
+  background: #f8f9fa;
+}
+
+.matchup {
+  font-size: small;
+}
+
+.my-card {
+  border: none;
+}
+
+.my-card:hover {
+  background: rgba(0, 0, 0, 0.001);
+}
+
+footer {
+  margin-top: 5em;
+  border-top: 3px solid black;
+  text-align: center;
+  height: 5em;
+  padding-top: 2em;
 }
 /*# sourceMappingURL=main.css.map */
