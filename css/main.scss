@@ -57,6 +57,14 @@
     justify-content: flex-end;
 }
 
+.table-scroll-y {
+    display: block;
+    height: 400px;
+    width: auto;
+    overflow-y: auto;
+    scrollbar-color: darkgray lightgray;
+  }
+
 .player-table {
     margin-top: 1em;
 
@@ -77,4 +85,8 @@
     }
 }
 
+.crd-body {
+    padding-top: 0em;
+    padding-bottom: 0.25em;
+}
 
