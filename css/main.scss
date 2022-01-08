@@ -1,3 +1,18 @@
+/*
+body {
+    //background: #F2F2F2;
+    background: url("../images/field1.jpg"); 
+    //height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    //overflow-y: scroll;
+}
+*/
+body {
+    background: #F2F2F2;
+}
+
 .my-row {
     border: 3px solid red;
 }
@@ -7,16 +22,28 @@
 }
 
 
-
 .logo {
     text-decoration: none;
     color: black;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-top: 1.5em;
+    z-index: -1;
 }
 
 .navbar-container {
     display: flex;
     place-content: space-between;
+    background: url("../images/field2.jpg");
+    opacity: 0.75;
+    // adjust for screen size
+    height: 7em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+    border: 3px solid black;
 
     nav {
         display: none;
@@ -26,13 +53,17 @@
 
 .mobile-menu {
     cursor: pointer;
+    padding-top: 2em;
+}
+
+.mobile-menu-disp {
+    display: block;
 }
 
 .sel-players-container {
 
     margin-top: 1em;
     margin-bottom: 2em;
-
     .sel-players {
         display: flex;
         justify-content: center;
@@ -67,10 +98,16 @@
 
 .player-table {
     margin-top: 1em;
+    border: 1px solid black;
 
-    .table-header {
-        background: #f8f9fa ;
+    .tbl-header {
+        background-color: rgba(0, 0, 0, 0.1);
     }
+}
+
+.tbl-row {
+    background-color: #FFFFFF;
+    border: none;
 }
 
 .matchup {
@@ -83,10 +120,24 @@
         // use js to fix this
         background: rgba(0, 0, 0, 0.001);
     }
+
+    .card-body {
+        padding-top: 0em;
+        padding-bottom: 0.25em;
+    }
 }
 
-.crd-body {
-    padding-top: 0em;
-    padding-bottom: 0.25em;
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #FBFBFB;
+
+    p {
+        font-size: 0.75em;
+    }
+}
+
+.card-background {
+    background-color: rgba(0, 0, 0, 0.001);
 }
 

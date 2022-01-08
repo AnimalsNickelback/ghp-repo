@@ -1,3 +1,18 @@
+/*
+body {
+    //background: #F2F2F2;
+    background: url("../images/field1.jpg"); 
+    //height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    //overflow-y: scroll;
+}
+*/
+body {
+  background: #F2F2F2;
+}
+
 .my-row {
   border: 3px solid red;
 }
@@ -9,7 +24,10 @@
 .logo {
   text-decoration: none;
   color: black;
-  font-size: 1.2em;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-top: 1.5em;
+  z-index: -1;
 }
 
 .navbar-container {
@@ -17,6 +35,15 @@
   display: -ms-flexbox;
   display: flex;
   place-content: space-between;
+  background: url("../images/field2.jpg");
+  opacity: 0.75;
+  height: 7em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+  border: 3px solid black;
 }
 
 .navbar-container nav {
@@ -25,6 +52,11 @@
 
 .mobile-menu {
   cursor: pointer;
+  padding-top: 2em;
+}
+
+.mobile-menu-disp {
+  display: block;
 }
 
 .sel-players-container {
@@ -75,10 +107,16 @@
 
 .player-table {
   margin-top: 1em;
+  border: 1px solid black;
 }
 
-.player-table .table-header {
-  background: #f8f9fa;
+.player-table .tbl-header {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tbl-row {
+  background-color: #FFFFFF;
+  border: none;
 }
 
 .matchup {
@@ -93,8 +131,22 @@
   background: rgba(0, 0, 0, 0.001);
 }
 
-.crd-body {
+.my-card .card-body {
   padding-top: 0em;
   padding-bottom: 0.25em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #FBFBFB;
+}
+
+footer p {
+  font-size: 0.75em;
+}
+
+.card-background {
+  background-color: rgba(0, 0, 0, 0.001);
 }
 /*# sourceMappingURL=main.css.map */
