@@ -45,19 +45,20 @@ body {
     border-bottom-right-radius: 0.2em;
     border: 3px solid black;
 
-    nav {
-        display: none;
-    }
+}
 
+nav {
+    display: none;
+}
+
+nav.mobile-menu-disp {
+    display: block;
 }
 
 .mobile-menu {
     cursor: pointer;
-    padding-top: 2em;
-}
-
-.mobile-menu-disp {
-    display: block;
+    //padding-top: 2em;
+    width: 3em;
 }
 
 .sel-players-container {

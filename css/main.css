@@ -46,17 +46,17 @@ body {
   border: 3px solid black;
 }
 
-.navbar-container nav {
+nav {
   display: none;
+}
+
+nav.mobile-menu-disp {
+  display: block;
 }
 
 .mobile-menu {
   cursor: pointer;
-  padding-top: 2em;
-}
-
-.mobile-menu-disp {
-  display: block;
+  width: 3em;
 }
 
 .sel-players-container {
