@@ -60,9 +60,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .tools-col {
@@ -129,13 +129,23 @@ body {
 }
 
 footer {
-  position: fixed;
   bottom: 0;
   background-color: #FBFBFB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1.5em;
 }
 
 footer p {
   font-size: 0.75em;
+}
+
+footer p span {
+  padding-left: 2em;
 }
 
 .card-background {
@@ -178,5 +188,10 @@ nav li a {
 
 .selected-click {
   background-color: #e8fce3;
+}
+
+.sport-img {
+  width: 3em;
+  height: 2em;
 }
 /*# sourceMappingURL=main.css.map */

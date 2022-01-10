@@ -59,7 +59,7 @@ body {
     margin-bottom: 2em;
     .sel-players {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
     }
 }
 
@@ -123,12 +123,18 @@ body {
 }
 
 footer {
-    position: fixed;
     bottom: 0;
     background-color: #FBFBFB;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5em;
 
     p {
         font-size: 0.75em;
+
+        span {
+            padding-left: 2em;
+        }
     }
 }
 
@@ -180,6 +186,11 @@ nav {
 .selected-click {
     background-color: #e8fce3;
     //background-color: #007289;
+}
+
+.sport-img {
+    width: 3em;
+    height: 2em;
 }
 
 
