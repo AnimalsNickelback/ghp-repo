@@ -21,45 +21,37 @@ body {
     border: 3px dotted blue;
 }
 
-
-.logo {
-    text-decoration: none;
-    color: black;
-    font-size: 1.4em;
-    font-weight: bold;
-    padding-top: 1.5em;
-    z-index: -1;
-}
-
-.navbar-container {
-    display: flex;
-    place-content: space-between;
-    background: url("../images/field2.jpg");
-    opacity: 0.75;
+.navbar-custom {
+    padding: 1em;
     // adjust for screen size
     height: 7em;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-bottom-left-radius: 0.2em;
-    border-bottom-right-radius: 0.2em;
-    border: 3px solid black;
+
+    .logo {
+        text-decoration: none;
+        color: white;
+        font-size: 1.4em;
+        font-weight: bold;
+        padding-top: 1.5em;
+        z-index: 999;
+    }
+
+    .navbar-container {
+        display: flex;
+        place-content: space-between;
+    };
+
+    nav {
+        display: none;
+    }
+
+    .mobile-menu {
+        cursor: pointer;
+        //padding-top: 2em;
+        width: 3em;
+    }
 
 }
 
-nav {
-    display: none;
-}
-
-nav.mobile-menu-disp {
-    display: block;
-}
-
-.mobile-menu {
-    cursor: pointer;
-    //padding-top: 2em;
-    width: 3em;
-}
 
 .sel-players-container {
 
@@ -102,6 +94,8 @@ nav.mobile-menu-disp {
     border: 1px solid black;
 
     .tbl-header {
+        //background-color: rgba(0, 0, 0, 0.1);
+        //color: white;
         background-color: rgba(0, 0, 0, 0.1);
     }
 }
@@ -141,4 +135,52 @@ footer {
 .card-background {
     background-color: rgba(0, 0, 0, 0.001);
 }
+
+nav.mobile-menu-disp {
+    display: block;
+}
+
+nav {
+    position: fixed;
+    z-index: 999;
+    width: 66%;
+    right: 0;
+    top: 0;
+    //background:  #20272E;
+    background: #007289; 
+    height: 100vh;
+    padding: 1em;
+
+    .nav-list {
+        margin-top: 5em;
+    }
+
+    // list items within nav
+    li {
+
+        // links within nav
+        a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 0.5em;
+            font-size: 1.3em;
+            text-align: right;
+        }
+
+    }
+}
+
+.mobile-menu-exit {
+    float: right;
+    margin: 0.5em;
+    cursor: pointer;
+}
+
+.selected-click {
+    background-color: #e8fce3;
+    //background-color: #007289;
+}
+
+
 

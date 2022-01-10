@@ -8,6 +8,10 @@ for(let i = 0; i < tblRow.length; i++) {
     tblRow[i].addEventListener('mouseout', () => {
         tblRow[i].getElementsByClassName('my-card')[0].classList.remove('card-backgorund');
     })
+
+    tblRow[i].addEventListener('click', () => {
+        tblRow[i].classList.add('selected-click');
+;    })
 }
 
 const mobileBtn = document.getElementById('mobile-cta');
@@ -18,6 +22,7 @@ const mobileBtnExit = document.getElementById('mobile-exit');
 
 mobileBtn.addEventListener('click', () => {
     nav.classList.add('mobile-menu-disp');
+    console.log(nav.classList);
 });
 
 mobileBtnExit.addEventListener('click', () => {

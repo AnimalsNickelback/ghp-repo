@@ -21,40 +21,32 @@ body {
   border: 3px dotted blue;
 }
 
-.logo {
+.navbar-custom {
+  padding: 1em;
+  height: 7em;
+}
+
+.navbar-custom .logo {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 1.4em;
   font-weight: bold;
   padding-top: 1.5em;
-  z-index: -1;
+  z-index: 999;
 }
 
-.navbar-container {
+.navbar-custom .navbar-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   place-content: space-between;
-  background: url("../images/field2.jpg");
-  opacity: 0.75;
-  height: 7em;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom-left-radius: 0.2em;
-  border-bottom-right-radius: 0.2em;
-  border: 3px solid black;
 }
 
-nav {
+.navbar-custom nav {
   display: none;
 }
 
-nav.mobile-menu-disp {
-  display: block;
-}
-
-.mobile-menu {
+.navbar-custom .mobile-menu {
   cursor: pointer;
   width: 3em;
 }
@@ -148,5 +140,43 @@ footer p {
 
 .card-background {
   background-color: rgba(0, 0, 0, 0.001);
+}
+
+nav.mobile-menu-disp {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: #007289;
+  height: 100vh;
+  padding: 1em;
+}
+
+nav .nav-list {
+  margin-top: 5em;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+.selected-click {
+  background-color: #e8fce3;
 }
 /*# sourceMappingURL=main.css.map */
