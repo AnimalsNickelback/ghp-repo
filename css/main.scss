@@ -50,6 +50,12 @@ body {
         width: 3em;
     }
 
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
 }
 
 
@@ -178,8 +184,45 @@ nav {
 }
 
 .selected-click {
-    background-color: #e8fce3;
+    //background-color: #e8fce3;
     //background-color: #007289;
+    background-color: #dce0e2;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .mobile-menu, .mobile-menu-exit {
+        display: none;
+    }
+
+    .navbar-container {
+        //display: grid;
+        //grid-template-columns: 360px auto;
+    }
+
+    .navbar-custom nav {
+        display: flex;
+        justify-content: space-between;
+        background: none;
+        position: unset;
+        height: auto;
+        width: 85%;
+        padding: 0;
+
+        ul {
+            display: flex;
+        }
+
+        a {
+            color: white;
+            font-size: 1em;
+            padding: .1em 1em;
+        }
+
+        ul.nav-list {
+            margin: 0;
+        }
+    }
 }
 
 
