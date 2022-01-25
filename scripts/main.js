@@ -22,7 +22,6 @@ const mobileBtnExit = document.getElementById('mobile-exit');
 
 mobileBtn.addEventListener('click', () => {
     nav.classList.add('mobile-menu-disp');
-    console.log(nav.classList);
 });
 
 mobileBtnExit.addEventListener('click', () => {

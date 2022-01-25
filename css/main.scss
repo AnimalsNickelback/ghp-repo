@@ -65,7 +65,7 @@ body {
     margin-bottom: 2em;
     .sel-players {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
     }
 }
 
@@ -129,12 +129,18 @@ body {
 }
 
 footer {
-    position: fixed;
     bottom: 0;
     background-color: #FBFBFB;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5em;
 
     p {
         font-size: 0.75em;
+
+        span {
+            padding-left: 2em;
+        }
     }
 }
 
@@ -223,6 +229,11 @@ nav {
             margin: 0;
         }
     }
+}
+
+.sport-img {
+    width: 3em;
+    height: 2em;
 }
 
 
